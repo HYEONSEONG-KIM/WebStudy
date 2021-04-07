@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<style>
+	ul, li{
+		//border: 2px solid green;
+	}
+	img{
+		width : 30px;
+		height : 30px;
+	}
+
+</style>
+
+</head>
+
+
+<body>
+<pre>
+리스트 : 항목들을 나열하는데 사용
+번호없는 리스트 : &ltul> &ltli> ... &ltli> &ltul>
+번호있는 리스트 : &ltol> &ltli> ... &ltli> &ltol>
+
+리스트에는 텍스트, 링크, 다른 링크들이 올 수 있음
+
+링크 클릭시 target 미설정시 default는 _self : 자신의 페이지, _blank : 새로운 페이지
+</pre>
+
+	<ul>
+		<li>메일</li>
+		<li>카페</li>
+		<li>블로그</li>
+	</ul>
+	
+	<ul>
+		<li><a href = "http://www.naver.com" target = "_blank">네이버</a></li>
+		<li><a href = "http://www.daum.net" target = "_blank">다음</a></li>
+		<li><a href = "http://www.w3schools.com" target = "_blank">w3school</a></li>
+	</ul>
+	
+	<ul>
+		<li><img src = "../images/딸기스무디.jpg" alt = ""></li>
+		<li><img src = "../images/대나무숲.jpg" alt = ""></li>
+		<li><img src = "../images/뱅쇼.jpg" alt = ""></li>
+	</ul>
+	
+	
+	<ul>
+		<li>
+			<a href = "http://www.naver.com">
+				<img src = "../images/딸기스무디.jpg" alt = "">
+			</a>
+		</li>
+		
+		<li>
+			<a href = "http://www.daum.net">
+				<img src = "../images/대나무숲.jpg" alt = "">
+			</a>
+		</li>
+		
+		<li>
+			<a href = "http://www.w3schools.com">
+				<img src = "../images/뱅쇼.jpg" alt = "">
+			</a>
+		</li>
+	</ul>
+	
+	
+	
+	<ol>
+		<li>에스프레소</li>
+		<li>카페라떼</li>
+		<li>아메리카노</li>
+		<li>카푸치노</li>
+	</ol>
+	
+	<ol>
+		<li><a href = "./esspresso.html">에스프레소</a></li>
+		<li><a href = "./cafelatte.html">카페라떼</a></li>
+		<li><a href = "./americano.html">아메리카노</a></li>
+		<li><a href = "./capuccino.html">카푸치노</a></li>
+	</ol>
+	
+	<dl>
+    <dt><a href = ./esspresso.html>에스프레소</a></dt>
+    <dd>- 커피의 기본, 커피의 원액이다.</dd>
+    <dt>아메리카노</dt>
+    <dd>- 에스프레소에 물을 넣은 것</dd>
+    <dt>카페라떼</dt>
+    <dd>- 커피에 우유를 섞은 것</dd>
+</dl>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
