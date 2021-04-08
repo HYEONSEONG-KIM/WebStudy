@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<style>
+		table{
+			border : 5px double green;
+		}
+		td{
+			width : 200px;
+			height : 100px;
+			text-align : center;
+		}
+		caption{
+			border : 5px solid red;
+			font-size : 3.0em;
+			margin : 10px;
+			caption-side: bottom;
+		}
+		#tab5{
+			margin : 90px auto;
+			border : 1px solid purple;
+		}
+		#tab5 td{
+			width : 180px;
+			height : 150px;
+		}
+		#tab6{
+			border : 5px solid blue;
+			border-collapse: collapse;
+			margin : 50px auto;
+		}
+		#tab6 th{
+			height: 80px;
+			font-size: 1.7em;
+			
+		}
+		#td_3{
+			width : 800px;
+		}
+	</style>
+
+</head>
+<body>
+	<table border = 1>
+		<caption>
+			테이블
+		</caption>
+		
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		
+		<tr>
+			<td rowspan="2">1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+	
+		<tr>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		
+		<tr>
+			<td colspan="3">1</td>
+		</tr>
+	</table>
+	
+	
+	
+	<table id = "tab5" border = 1>
+		<tr>
+			<td colspan="2"></td>
+			<td colspan="2"></td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td colspan="4"></td>
+			<td colspan="2"></td>
+		</tr>
+		
+		<tr>
+			<td colspan="4"></td>
+			<td colspan="2" rowspan="2"></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	
+	
+	</table>
+	
+	
+	
+	<table id = "tab6" border = 1>
+		<tr>
+			<th colspan="5">평생교육원 강좌 소개 - 2019년도 1학기</th>
+		</tr>
+		
+		<tr>
+			<th>강좌 이름</th>
+			<th>강의자</th>
+			<th id = "td_3">소개</th>
+			<th>강좌코드</th>
+			<th>실습비</th>
+		</tr>
+		
+		<tr>
+			<td>뎃생과 유화</td>
+			<td>김철수</td>
+			<td>소개글....</td>
+			<td>H27</td>
+			<td>100,000원</td>
+		</tr>
+		
+		
+		
+		<tr>
+			<td>바이올린</td>
+			<td>홍길동</td>
+			<td>소개글...</td>
+			<td>H28</td>
+			<td>200,000원</td>
+		</tr>
+		
+		<tr>
+			<td>성악아카데미</td>
+			<td>김호성</td>
+			<td>소개글...</td>
+			<td>H30</td>
+			<td>300,000원</td>
+		</tr>
+	
+	
+	
+	</table>
+	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
