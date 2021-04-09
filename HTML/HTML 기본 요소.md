@@ -46,9 +46,9 @@
 ## table
 - 표 형태의 데이터를 표시하는 데 사용
 - 초기의 웹 페이지에서는 전체 페이지의 레이아웃에 사용
-- Row : <tr>...</tr>
-- data : <td>...</td>
-- header : <th>...</th>
-- <table border = 1> =>border값 1기본으로 설정
+- Row : tr.../tr
+- data : td.../td
+- header : th.../th
+- table border = 1 =>border값 1기본으로 설정
 - rowspan : 행병합
 - colsapn : 열병합

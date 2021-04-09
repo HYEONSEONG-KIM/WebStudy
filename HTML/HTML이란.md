@@ -19,3 +19,9 @@
 - HTML 문서는 대소문자를 가리지 않으므로 Head, HEAD, HeaD, head 등 어떠한 형태로 써도 무방하나 되도록 보기 편하고 수정이 용이하도록 소문자로 통일해서 쓰는 것이 좋음
 - 시작태그와 종료태그를 먼저 쓰고 그 안에 내용을 넣음
 - HTML 문서를 정의할 때 들여쓰기(indent)에 주의
+
+
+### 이클립스 web개발 서버 설정 및 프로젝트 생성
+- 새로 만들기 -> dynamic web project -> 서버 설정 -> target rumtime에 설정이 없으면 새로 만들어서 톰캣 설치한 경로로 설정
+- 실행시 포트번호 겹치면 server -> server.xml에서 8080포트 80(웹 표준) 으로 변경  & URIEncoding = "UTF-8" 추가
+- window - 설정 - General - web Browser - 크롬 추가 - window - webBrowser - 크롬으로 변경
