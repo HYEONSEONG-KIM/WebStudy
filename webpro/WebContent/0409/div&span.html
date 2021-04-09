@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	spna{
+	
+	}
+	
+	div{
+		border : 2px dotted green;
+		margin : 10px;
+		width : 90%;
+		height: 100px;
+	}
+	.d1{
+		height : 400px;
+		width : 80%;  
+	}
+	.in{
+		box-sizing : border-box;
+		/* width : 40%; */
+		/*화면이 줄어 들 때 라인이 바뀌지 않게*/
+		width : calc(30% - 1%);
+		height: 90%;
+		float : left;
+		
+		font-size : 1.2em;
+	}
+	span{
+		background: red;
+	}
+</style>
+</head>
+<body>
+	<div class = "d1">
+		<div>
+			<!-- <span>
+				<p>무궁화 꽃이 피었습니다</p>
+			</span> -->
+		</div>
+	
+		<div>
+			<!-- <p>무궁화 꽃이 피었습니다</p> -->
+		</div>
+	</div>
+	
+	<div class = "d1">
+		<div class = "in">
+			&lt;div class = "in"> <br>
+			div요소에 class속성으로 in을 부여 <br>
+			스타일에서 클래스 요소를 선택 => . <br>
+			.in{
+			<span>box-sizing : border-box;</span> <br>
+			/* width : 40%; */ <br>
+			/*화면이 줄어 들 때 라인이 바뀌지 않게*/ <br>
+			<span>width : calc(30% - 1%);</span> <br>
+			height: 90%; <br>
+			<span>float : left;</span> <br>
+			font-size : 1.5em;
+			}
+		</div>
+	
+		<div class = "in">
+			화면의 크기가 줄어들 때 요소도 같이 비율에 따라서 줄어듬
+			box-sizing <br>
+			width : calc() <br>
+			
+			블럭요소를 인라인 처럼 배치
+			float : left <br>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

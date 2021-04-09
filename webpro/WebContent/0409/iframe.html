@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+
+<style>
+
+	iframe{
+		width : 800px;
+		height: 600px;
+		border : 5px solid orange;
+	}
+	span{
+		background : blue;
+		color : white;
+		font-weight: bold;
+	}
+	img{
+		width : 200px;
+		height: 300px
+	}
+</style>
+</head>
+<body>
+<pre>
+iframe : 현재 웹 페이지 안에 다른 웹페이지를 삽입
+iframe의 name을 이용해서 a태그의 target의 속성값으로 사용
+&lt;iframe <span>name = "..."</span> src = "...">...&lt;/a>
+&lt;a href = "../0407/americano.html" <span>target = "ifr"</span>>
+
+인라인 요소 : 요소 자체의 크기 조절은 안됨(width, height)
+	span, a
+	iframe, img 태그 자체는 인라인 요소지만 크기 조절이 가능
+</pre>
+	<h1>iframe연습</h1>
+	<br>
+	<a href = "../0407/americano.html" target = "ifr">아메리카노</a>
+	<a href = "../0407/capuccino.html" target = "ifr">카푸치노</a>
+	<a href = "../0407/cafelatte.html" target = "ifr">카페라떼</a>
+	<br><br>
+	<iframe name = "ifr" src = "../0408/imagelink.html">
+	</iframe>
+	
+	<img src = "../images/등대.jpg" alt = "">
+	
+	무궁화 꽃이 피었습니다
+</body>
+</html>
