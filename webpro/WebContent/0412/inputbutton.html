@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<script>
+
+	 function proc1(){
+		
+		 //var를 쓰면 지역변수, 안쓰면 전역변수
+		var a = parseInt(document.getElementById("price").value);
+		var b = parseInt(document.getElementById("su").value);
+		
+		alert(a * b);
+		
+	}
+	
+</script>
+</head>
+<body>
+<pre>
+ script에서 html의 요소에 접근
+ id이름을 이용해서 : doucument.getElementById('아이디이름')
+ 
+ a = doucument.getElementById('price')
+ b = doucument.getElementById('su')
+ 
+ 접근한 요소에서 값 가져오기 - value
+value로 얻어지는 값은 문자열
+ a.value
+ b.vlaue
+</pre>
+	<form>
+		가격 : <input type = "text" id = "price"><br>
+		수량 : <input type = "text" id = "su"><br>
+		<input type = "button" value = "확인" onclick = "proc1()">
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

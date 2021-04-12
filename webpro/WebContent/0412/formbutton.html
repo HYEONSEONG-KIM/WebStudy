@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+</head>
+<body>
+<pre>
+	&lt;button>전송&lt;/button> 전송기능 수행
+	&lt;button type ="button">확인&lt;/button> <br>
+	&lt;input type = "button" value = "전송"> 전송기능 수행
+	&lt;input type = "button" value = "확인">
+	
+	textarea에 입력시 엔터기호가 입력됨
+	엔터기호 : \r\n의 기능이 포함
+	서버에서 처리시 브라우저에 출력 &lt;br> 태그로 줄바꿈 처리 해야함
+</pre>
+
+	<form action = "formbut.jsp" method = "post">
+	
+	이름 : <input type = text" name = "name"><br>
+	전화번호 : <input type = "text" name = "tel"><br>
+	<textarea name = "area" rows="5" cols="50"></textarea><br>
+	<select name = "cars">
+		<option value = "벤츠">벤츠</option>
+		<option value = "소나타">소나타</option>
+		<option value = "모닝">모닝</option>
+		<option value = "QM6">QM6</option>
+		<option value = "BMW">BMW</option>
+	</select><br>
+	<button>전송</button>
+	<button type ="button">확인</button> <br>
+	<input type = "submit" value = "전송">
+	<input type = "button" value = "확인">
+	
+	
+	</form>
+</body>
+</html>
