@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<style>
+	form{
+		display: none;
+	}
+	label{
+		display: inline-block;
+		width: 100px;
+		height: 20px;
+		
+	}
+	fieldset{
+		width: 50%;
+		height: 200px;
+	}
+	.gend{
+		width : 50px;
+		height: 20px;
+	}
+</style>
+
+<script>
+	function proc1(){
+		a = document.getElementById('f1');
+		a.style.display = "block";
+	}
+	
+	function proc2(){
+		b = document.querySelector("#f2");
+		b.style.display = "block";
+	}
+</script>
+
+
+</head>
+<body>
+<pre>
+fieldset : 항목들을 그룹화, 블럭요소, 크기조절 가능
+label : input요소의 제목, 인라인 요소, 크기조절 불가
+인라인 요소에 크기조절을 위해서 display : inline-block 스타일 이용
+
+display : none
+display : block
+display : inline
+
+스크립트에서 html요소중 id이름을 이용해서 접근
+document.getElementById('아이디이름')
+document.querySelector('#아이디이름')
+
+스크립트에서 스타일 지정
+변수명.style.지정요소 = "속성"
+</pre>
+
+<input type = "button" value = "f1보기" onclick = "proc1()">
+<button type = "button" onclick = "proc2()">f2보기</button>
+	<form id = "f1">
+		<fieldset>
+			<legend>인적사항 입력</legend>
+			<label for = "name">이름</label> 
+			<input id = "name" type = "text" name = "name"><br>
+			
+			<label for = "tel">전화번호</label> 
+			<input id = "tel" type = "text" name = "tel"><br>
+			
+			<label for = "addr">주소</label> 
+			<input id = "addr" type = "text" name = "addr"><br>
+			
+			<input type = "radio" value = "남자">남자
+			<input type = "radio" value = "여자">여자<br>
+			<input type = "submit">
+		</fieldset>
+	</form>
+
+	<br><br>
+
+	<form id = "f2">
+   <fieldset>
+     <legend>인적사항 입력</legend>
+      <label for="name">이름</label>
+      <input id="name" type="text" name="name"><br>
+     
+      
+   	  <label for="tel">전화번호</label> 
+   	  <input id="tel" type="text" name="tel"><br>
+   	  
+  	  <label for="addr"> 주소</label> 
+  	  <input id="addr"  type="text" name= "addr"><br>
+  	  
+  	  <input type = "radio" name = "gender" value = "남자">
+  	  <label class = "gend">남자</label>
+  	  <input type = "radio" name = "gender" value = "여자">
+  	  <label class = "gend">여자</label><br>
+  	  
+     <input type="submit">
+   </fieldset>
+ </form>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

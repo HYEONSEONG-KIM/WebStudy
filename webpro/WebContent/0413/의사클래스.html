@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css" type = "text/css">
+
+<style type = "text/css">
+	a{
+		margin: 15px;
+		padding : 10px;
+		text-decoration: none;
+	}
+	a:link {
+		color : red;
+	}
+	a:visited {
+		color : green;
+	}
+	a:hover{
+		font-size : 1.5em;
+		color : magenta;
+		text-decoration: underline;
+	}
+	a:active{
+		font-size : 2.0em;
+		background: blue;
+		color : white;
+	}
+	div{
+		border : 2px dotted orange;
+		padding : 20px;
+		margin: 10px
+	}
+	p:hover {
+		background: lime;
+	}
+	#d3 p:nth-child(odd){
+		background: yellow;
+	}
+	#d3 .p2:nth-child(even){
+		background: pink;
+	}
+	/* 
+	#d3 p:
+	#d3 .p2
+	#d3 > p
+	#d3 > .p2
+	#d3 p[class=p2]
+	 */
+</style>
+</head>
+<body>
+<pre>
+의사클래스 - 가상클래스
+상태나 구조에 의해서 선택
+
+상태 
+:link
+:visited
+:hover
+:active
+
+구조
+:nth-child(odd), :nth-child(even) 
+:nth-child(1), :nth-child(2n)
+
+
+</pre>
+
+<div>
+	<a href = "http://www.naver.com">네이버</a>
+	<a href = "http://www.daum.net">다음</a>
+	<a href = "http://www.w3schools.com">w3school</a>
+	<a href = "http://www.w3c.org">w3c</a>
+
+</div>
+
+<div id = "d2">
+	<p class = "p1">무궁화 꽃이 피었습니다</p>
+	<p class = "p1">나뭇잎이 파릇파릇 피어나고 있어요</p>
+</div>
+
+
+<div id="d3">
+  <p class = "p2">무궁화꽃이 피었습니다.</p>
+  <p class = "p2">나뭇잎이 파릇파릇 피어나고 있어요</p>
+  <p class = "p2">개나리 꽃이 피었습니다</p>
+  <p class = "p2">무야호</p>
+  <p class = "p2">라일락은 아이유 노래</p>
+  <p class = "p2">집가고싶다....</p>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
