@@ -50,6 +50,13 @@
     - image : 이미지를 전송 버튼으로 만든다.
     - hidden : 사용자에게는 보이지 않지만 서버로 전송된다.
     - submit : 제출 버튼 생성
+- 추가된 input 속성
+    - autocomplete : 자동으로 입력을 완성
+    - autofocus : 페이지가 로드 되면 자동으로 입력 포커스를 갖음
+    - placeholder : 입력 힌트를 희미하게 보여줌
+    - readonly : 읽기 전용 필드
+    - required : 입력 양식을 제출하기 전에 반드시 채워져 있어야 함을 나타냄
+    - pattern : 허용하는 입력의 형태를 정규식으로 지정
 
 ## etc...
 - button : 기본적으로 전송기능이 있음, input type로 작성시 전송기능 x
@@ -63,4 +70,13 @@
 - script 태그를 head안에 작성
 - var라는 변수가 있지만 작성하지 않아도 됨(var를 작성하면 지역변수 없으면 전역변수)
 - 함수 -> function
+
+## fieldset
+- 입력 요소를 그룹핑 하는데 사용하는 태그
+- 그룹의 경계선을 그려줌
+- legend를 사용하면 그룹에 제목을 붙일 수 있음
+
+## label
+- input요소를 위한 label을 정의
+- for를 사용하면 label과 input의 id속성을 통해 서로 연결할 수 있음
 
