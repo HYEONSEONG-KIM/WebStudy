@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	p{
+		width : 50%;
+		height: 200px;
+		border : 10px solid olive;
+	}
+	#p2{
+		display : none;
+	}
+	#p3{
+		visibility: hidden;
+	}
+</style>
+
+<script>
+	function proc(){
+		p2 = document.getElementById("p2");
+		
+		
+		p2.style.display = "block";
+		
+		p1 = document.getElementById("p1");
+		p1.style.display = "none";
+		
+		
+	}
+</script>
+</head>
+<body>
+	<input type = "button" value = "확인" onclick = "proc()">
+	<p id = "p1">Hello World1</p>
+	<p id = "p2">Hello World2</p>
+	<p id = "p3">Hello World3</p>
+</body>
+</html>

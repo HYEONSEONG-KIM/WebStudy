@@ -3,24 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
 <style>
 	div{
 		border : 1px dotted orange;
 		margin: 10px;
 		padding: 10px;
-		height: 100px;
+		height: auto;
 		width : 500px;
+		word-wrap : break-word;
 	}
+	
 </style>
 
 <script>
 	function append(){
+		//script 배열
+		var str = ["Hello", "happy", "Good", "java", "html", "css"];
 		
+		//문자중에서 랜덤으로 하나를 선택 str[0], str[5]...
+		ran = parseInt(Math.random() * (str.length));
+		
+		//선택된 문자
+		str[ran]
+
+		//div에 추가
+		var a = document.getElementsByTagName('div')[0];
+		
+	//	a.innerHTML = str[ran]
+	
+	text = document.createTextNode(str[ran]);
+	a.appendChild(text);
 	}
 
 </script>
 </head>
 <body>
+<pre>
+ecma Script : 자바스크립트의 버전을 나타내는 표준 정의어 es2, es4, es6, es8
+script에서 html요소에 접근
+id를 이용 => 
+doucument.getElementById('아이디이름') 
+doucument.querySelector('#아이디이름') -> es6
+
+태그이름을 이용 =>
+doucument.getElementsByTagName('태그이름') -> 태그가 여러개의 경우 배열형태로 저장
+a= doucument.getElementsByTagName('태그이름') 
+
+document.querySelector('태그이름') -> 첫번째 태그만 선택
+document.querySelectorAll('태그이름') -> 배열형태 
+
+class를 이용
+document.getElementsByClassName('class이름')[] -> 배열형태
+doucument.querySelector('.class이름') -> 첫번째 요소만 접근
+doucument.querySelectorAll('.class이름')
+
+//div에 추가 하기 위해서 div요소에 접근
+var a = document.getElementsByTagName('div')[0];
+
+//일반 문자를 객체화 - Text Object로 변환
+text = document.createTextNode(...);
+
+//div에 자식객체로 추가
+a.appendChild(text);
+------------------------------------------------------------
+테두리 밖으로 벗어나는 문자를 안으로 위치하게 함
+word-wrap : break-word
+
+요소의 세로 길이 조절
+height : auto
+
+</pre>
 	<input type = "button"  value = "확인" onclick="append()"><br>
 	<div>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 	aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

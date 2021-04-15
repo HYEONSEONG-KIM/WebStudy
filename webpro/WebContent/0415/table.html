@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+
+<style>
+	table{
+		border : 3px solid blue;
+	}
+	#t1{
+		border-collapse: collapse;
+	}
+	td{
+		width : 300px;
+		height: 50px;
+		text-align: center;
+	}
+	#t2{
+		border-spacing: 10px;
+		empty-cells: hide;
+	}
+	.r1{
+		background: lightblue;
+		
+	}
+	.r2{
+		background: lightgray;
+	}
+	#t4 tr:nth-child(odd){
+		background: skyblue;
+	}
+	#t4 tr:nth-child(even){
+		background: lightgreen;
+	}
+	#t4 tr{
+		color : red;
+		background: yellow;
+	}
+	tr>td {
+		color : blue;	
+	}
+</style>
+</head>
+
+<body>
+<pre>
+#t1{
+	border-collapse: collapse;
+	}
+</pre>
+
+	<table id = "t1" border = 1>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	
+	
+	<br><br>
+	
+<pre>
+#t2{
+		border-spacing: 10px;
+		empty-cells: hide;
+	}
+</pre>
+	<table id = "t2" border = 1>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	
+	<br><br>
+	
+<pre>
+//홀수번째 tr class= "r1"
+.r1{
+	background: lightblue;
+		
+}
+//짝수번째 tr class="r2"
+.r2{
+	background: lightgray;
+}
+</pre>
+	<table id = "t3" border = 1>
+		<tr class = "r1">
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+
+		<tr class = "r2">
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+
+		<tr class = "r1">
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr class = "r2">
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	
+	<br><br>
+	
+<pre>
+//구조를 나타내는 의사클래스
+nth-child(odd)
+nth-child(even)
+
+
+</pre>
+	
+	<table id = "t4" border = 1>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
