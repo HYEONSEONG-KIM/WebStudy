@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+		min-width: 1000px;
+	}
+	div{
+		border : 1px dotted green;
+		margin: 5px;
+		padding : 5px;
+		height: 150px;
+		width : 100%;
+		border-radius : 50px;
+		box-sizing : border-box;
+		
+	}
+	#header{
+		background-image: linear-gradient(olive, white);
+	}
+	#nav{
+		background : pink;
+		float: left;
+		width : calc(25% - 1%);
+		height: 500px;
+	}
+	#content{
+		background : skyblue;
+		float: right;
+		width: calc(72% - 1%);
+		height: 500px;
+	}
+	#footer{
+		background : lightgreen;
+		clear: both;
+	}
+</style>
+</head>
+<body>
+	<div id = "header"></div>
+	<div id = "nav"></div>
+	<div id = "content"></div>
+	<div id = "footer"></div>
+</body>
+</html>

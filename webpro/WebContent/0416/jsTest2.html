@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		border : 2px solid blue;
+		width : 500px;
+		height: 500px;
+		margin: 20px;
+		padding: 10px;
+		background: yellow;
+	}
+</style>
+
+<script>
+
+	function proc1(){
+		var now = new Date();
+		//document.write(now + "<br>");
+		
+		//div접근
+		var vdiv = document.getElementsByTagName("div")[0];
+		/* 
+		//출력
+		vdiv.innerHTML = now + "<br>";
+		vdiv.innerHTML += now.toLocaleString() + "<br>";
+	
+		vdiv.textContent = now + "<br>";
+		vdiv.textContent += now.toLocaleString() + "<br>"; */
+		
+		//출력할 내용을 구성
+		str = now + "<br>";
+		str += now.toLocaleString() + "<br>";
+		
+		vdiv.innerHTML = str;
+	}
+	
+	function change(){
+		
+		//배경색 바꾸기
+		var vdiv = document.getElementsByTagName("div")[0];
+		
+		var cr = parseInt(Math.random() * 256);
+		var cg = parseInt(Math.random() * 256);
+		var cb = parseInt(Math.random() * 256);
+		
+		console.log(cr,cg,cb);
+		r16 = cr.toString(16);
+		g16 = cg.toString(16);
+		b16 = cb.toString(16);
+		console.log(r16,g16,b16);
+		
+		vdiv.style.background = "#" + r16 + g16 + b16;
+		
+	}
+</script>
+</head>
+<body>
+<pre>
+버튼 클릭 하면 div요소에 날짜를 출력
+js에서 html요소에 접근
+id이용 => document.getElementsByTagName('태그이름')[0]
+
+js에서 html요소에 출력
+innerHTML : input 외 div p span td 출력하고자 하는 내용에 html태그가 포함 된 경우
+textContent : input 외 div p span td 출력하고자 하는 내용에 html태그가 포함 안된 경우
+
+value : input type = text, input type = typetextarea, password 태그에 출력
+</pre>
+
+	<input type = "button" value = "확인" onclick = "proc1()">
+	<div onclick = "change()"></div>
+</body>
+</html>

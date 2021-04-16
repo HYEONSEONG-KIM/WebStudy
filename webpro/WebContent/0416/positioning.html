@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href = "../css/outstyle.css">
+<style>
+	div{
+		border : 1px solid blue;
+		width : 200px;
+		height: 100px;
+		margin: 30px;
+		padding: 10px;
+	}
+	#d2{
+		position : relative;
+		top : 100px;
+		left : 250px;
+	}
+	#d7{
+		background-image : linear-gradient(skyblue, white);
+		position : absolute;
+		top : 200px;
+		right : 400px;
+	}
+	#d9{
+		position: fixed;
+		background: pink;
+		top : 400px;
+		right : 200px;
+	}
+</style>
+</head>
+<body>
+<pre>
+정적위치(static) : 정상적인 흐름에 따라 배치
+</pre>
+	<div></div>
+	<div></div>
+	<div></div>
+	<hr>
+<pre>
+상대위치(relative) : 정적위치를 기준으로 위치가 변경
+</pre>
+	<div id = "d1">d1</div>
+	<div id = "d2">d2<br>
+		position : relative<br>
+		top : 100px<br>
+		left : 200px</div>
+		
+	<div id = "d3">d3</div>
+	<div id = "d4">d4</div>
+	<hr>
+<pre>
+절대위치(absolute) : 컨테이너의 원점을 기준으로 위치를 변경
+</pre>
+
+	<div id = "d5">d5</div>
+	<div id = "d6">d6</div>
+	<div id = "d7">d7<br>
+		background-image : linear-gradient(skyblue, white)<br>
+		position : absolute<br>
+		top : 200px<br>
+		right : 400px</div>
+	<div id = "d8">d8</div>
+	
+	<hr>
+<pre>
+고정위치(fixed) : 윈도우의 원점을 기준으로 위치를 변경
+</pre>
+
+	<div id = "d9">d9</div>
+	<div id = "d10">d10</div>
+	<div id = "d11">d11</div>
+	<div id = "d12">d12</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
