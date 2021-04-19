@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<style>
+	div{
+		width : 300px;
+		height: 400px;
+		border : 2px dotted orange;
+		margin-top: 10px;
+	}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	function proc(){
+		//x리턴값 문자열			
+		var x = prompt("나이를 입력하세요", "만나이로 입력하세요");
+		alert(x);	
+		
+
+	}
+	
+	function calc(){
+		var num;
+		x = prompt("첫번째 정수를 입력하세요", "정수 입력");
+		y = prompt("두번째 정수를 입력하세요", "정수 입력");
+		num = parseInt(x) + parseInt(y);
+		
+		let dd = document.querySelector("#d1");
+		let dd2= document.getElementById('d1');
+		
+		var str = "입력 1 : " + x + "<br>";
+		str += "입력2 : " + y + "<br>";
+		str += "덧셈결과 : " + num + "<br>";	
+		dd.innerHTML = str;
+	}
+	
+	function ptcalc(){
+		
+		let x = parseInt(prompt("정수를 입력하세요"));
+		let op = prompt("연산자를 입력하세요")
+		let y = parseInt(prompt("정수를 입력하세요"));
+		
+		switch(op){
+		case "+" :
+			result = x + y;
+			break;
+		case "-" :
+			result = x - y;
+			break;
+		case "*" :
+			result = x * y;
+			break;
+		case "/" :
+			result = x / y;
+			result = result.toFixed(2); //고정소수점 2자리 표시, 3째 자리에서 반올림
+			break;
+		
+		}
+		
+		/* if(op === "+"){
+			result = x + y;	
+		}else if(op === "-"){
+		 	result = x - y;
+		}else if(op === "*"){
+			result = x * y;
+		}else if(op === "/"){
+			result = x / y;
+		} */
+		str = "첫번째 정수 : " + x + "<br>";
+		str += "연산자 : " + op + "<br>";
+		str += "두번째 정수 : " + y + "<br>";
+		str += "결과 : " + result + "<br>";
+		
+		let show = document.getElementById("d2");
+		d2.innerHTML = str;
+		
+	}
+	</script>
+	
+	<h1>prompt()함수</h1>
+	<h3>나이 입력받기</h3>
+	<input type = "button" value = "확인" onclick = "proc()">
+	<br><br>
+<pre>
+두 개의 정수를 각각 입력해서 덧셈을 수행
+prompt()함수의 리턴결과값은 string
+덧셈연산을 하기 위해서는 정수로 변환
+</pre>
+	<input type = "button" value = "확인" onclick = "calc()">
+	<div id = "d1"></div>
+	
+<pre>
+두개의 정수와 연산자를 입력하여 계산
+prompt함수 이용
+</pre>
+
+<div id = "d2"></div>
+<input type = "button" value = "결과" onclick = "ptcalc()">
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<script type="text/javascript">
+	
+	function calc(){
+		
+		let vx = document.getElementById("x").value;
+		let vy = document.getElementById("y").value;
+		sum = parseInt(vx) + parseInt(vy);
+		
+		document.getElementById("sum").value = sum;
+		
+		
+	}
+	
+</script>
+</head>
+<body>
+<pre>
+html type = text 요소에 입력한 값을 script에서 사용
+let vx = documnet.getElementById('x')
+let vy = documnet.getElementById('x')
+</pre>
+
+<form name = "ff">
+	첫번째 정수 : <input type = "text" id = "x"><br>
+	두번째 정수 : <input type = "text" id = "y"><br>
+	결과(합) : <input type = "text" id = "sum"><br>
+	<input type = "button" value = "확인" onclick = "calc()"><br>
+</form>
+<pre>
+script에서 html요소로 접근
+
+document.getElementById('id이름')
+
+document.getElementsClassName('class이름')[0]
+document.getElementsByTagName('tag이름')[0]
+
+document.querySelector("#아이디")
+
+document.querySelector(".클래스이름")
+document.querySelectorAll(".클래스이름")
+
+document.querySelector("태그이름")
+document.querySelectorAll("태그이름")
+
+document.getElementsByName('name이름')
+
+document.form이름.요소이름
+</pre>	
+
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
