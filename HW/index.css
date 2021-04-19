@@ -1,0 +1,136 @@
+body{
+    min-width: 1000px;
+}
+div{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header{
+  
+    height: 130px;;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+header img{
+    width : 70px;
+    height: 70px;
+    margin-top: 10px;;
+ 
+}
+header a{
+    
+    font-size: 2.0em;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    color: black;
+
+    
+}
+
+nav{
+    height: 70px;   
+    margin-bottom: 10px;
+    border-radius: 20px;
+    text-align : center;
+    border: 2px dotted black;
+ 
+}
+nav ul{ 
+    display: inline-block;
+    width : 90%
+}
+
+nav li{
+    float: left;
+    list-style: none;
+    width: 19%;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+
+}
+nav a:link{
+    text-decoration: none;
+}
+nav li:hover{
+    background-color: rgb(234, 236, 240);
+}
+nav a:active{
+    color: white;
+}
+
+.as1 {
+    background-color:rgb(123, 144, 212);
+    float: left;
+    height: 500px;
+    width: 23%;
+    margin-right: 10px;
+ 
+}
+.as1 ul{
+    margin-top :  50px;
+    
+}
+.as1 a{
+    color: white;
+}
+
+.as1 li{
+    margin-left: -38px;
+    width: 99%px;
+    height: 50px;
+    line-height: 40px;
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(93, 131, 187);
+    border: 0.3px solid rgba(129, 138, 175, 0.842);
+}
+
+.as1 a:link{
+    text-decoration: none;
+}
+
+.as1 li:hover{
+    background-color: rgb(66, 66, 182);
+}
+.as1 a:active{
+    color: black;
+}
+
+
+section{
+    background-color: turquoise;
+    float: left;
+    width: 43%;
+    height: 500px;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+
+.as2 {
+    background-color: salmon;
+    float: right;
+    width: 29%;
+    height: 500px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+footer{
+    clear: both;
+    background-color: rgb(88, 87, 87);
+    height: 80px;
+
+    text-align: center;
+}
+footer p{
+    font-weight: bold;
+    color: honeydew;
+    line-height: 80px;
+}
