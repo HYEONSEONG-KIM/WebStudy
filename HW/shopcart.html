@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        margin-top: 200px;
+        text-align: center;
+        height: 500px;
+    }
+    table{
+       display: inline-block;
+   
+        border-collapse: collapse;
+        border: 1px solid rgb(199, 197, 197);
+       
+    }
+  tr{
+      text-align: center;
+  }
+    input{
+        display: inline-block;
+        margin-top: 10px;
+        text-align: center;
+        margin-left: 5px;
+    }
+    a{
+        display: inline-block;
+        margin-top: 30px;
+        margin-right: 450px;
+    }
+    a:link{
+        text-decoration: none;
+    }
+    a:hover{
+        text-shadow: 2px 2px 2px gray;
+        
+    }
+    a:visited{
+        color: black;
+    }
+
+</style>
+<body>
+
+    <form>
+    <h1>장바구니 페이지</h1>
+    <table  border="1">
+        <tr>
+            <th>품목</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th>합계</th>
+        </tr>
+
+        <tr>
+            <td>컴퓨터 세트</td>
+            <td>2,000,000원</td>
+            <td><input type = "text" placeholder="0"></td>
+            <td><input type = "text" placeholder="0"></td>
+        </tr>
+
+        <tr>
+            <td>티셔츠</td>
+            <td>50,000원</td>
+            <td><input type = "text" placeholder="0"></td>
+            <td><input type = "text" placeholder="0"></td>
+        </tr>
+
+        <tr>
+            <td>음악파일</td>
+            <td>1,000원</td>
+            <td><input type = "text" placeholder="0"></td>
+            <td><input type = "text" placeholder="0"></td>
+        </tr>
+
+        <tr>
+            <td>영화파일</td>
+            <td>5,000원</td>
+            <td><input type = "text" placeholder="0"></td>
+            <td><input type = "text" placeholder="0"></td>
+        </tr>
+
+    </table>
+    <br>
+    <input type="button" value="계산"><input type="button" value="구매"><input type="reset" value="초기화">
+    
+    <br><a href="./index.html">Back to Home</a>
+</form>
+</body>
+</html>
