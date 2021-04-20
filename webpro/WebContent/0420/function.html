@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href ="../css/outstyle.css">
+<style>
+	label{
+		display : inline-block;
+		width : 80px;
+	}
+	form{
+		border : 2px solid blue;
+		margin : 10px;
+		padding : 10px;	
+	}
+	p{
+	
+	}
+	span{
+		background: yellow;
+		border : 1px dotted red;
+	}
+	.but{
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		font-size: 20px;
+		margin: 10px;
+	}
+	
+</style>
+<script type="text/javascript">
+
+	function proc1(op){
+		
+		//입력 된 값 가져오기
+		let x = parseInt(document.getElementById("x").value);
+		let y = parseInt(document.getElementById("y").value);
+		
+		result = 0;
+		
+		switch(op){
+			case '+' : result = add(x,y); break;
+			case '-' : result = sub(x,y); break;
+			case '*' : result = mul(x,y); break;
+			case '/' : result = divf(x,y); break;
+		}
+		
+		document.getElementById("res").value = result;
+		
+		document.getElementById("res").value = result;
+		
+		document.getElementById("sp1").innerHTML = x;
+		document.getElementById("sp2").innerHTML = y;
+		document.getElementById("sp3").innerHTML = result;
+		
+	}
+	
+	function add(x,y){
+		
+		return x + y;
+		
+	}
+	
+	function sub(x,y){
+		return x - y;
+	}
+	
+	function mul(x,y){
+		return x * y;
+	}
+	function divf(x,y){
+		return x / y;
+	}
+
+</script>
+
+</head>
+<body>
+<pre>
+input태그의 입력값을 script에서 사용
+value를 이용
+document.getElementById('x').value
+
+value를 이용하여 html요소의 값을 변경 = set
+document.getElementById('res').value = 출력값(내용)
+
+span태그의 값을 출력 - innerHTML, TextContent
+
+</pre>
+	<form name = "ff">
+	<label>첫번째 </label> <input name = "x" id = "x"><br>
+	<label>두번째</label> <input name = "y" id = "y"><br>
+	<label>결  과</label> <input name = "res" id = "res"><br>
+	
+	<input class = "but" type = "button" value = "+" onclick = "proc1('+')">
+	<input class = "but" type = "button" value = "-" onclick = "proc1('-')">
+	<input class = "but" type = "button" value = "*" onclick = "proc1('*')">
+	<input class = "but" type = "button" value = "/" onclick = "proc1('/')">
+	<br><br>
+	
+	<p><label>첫번째 값</label><span id = "sp1"></span></p>
+	<p><label>두번째 값</label><span id = "sp2"></span></p>
+	<p><label>결과 값</label><span id = "sp3"><span></p>
+	</form>
+</body>
+</html>

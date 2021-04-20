@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		width: 150px;
+		height: auto;
+		border: 1px solid blue;
+	}
+</style>
+
+<script type="text/javascript">
+
+	function randproc(){
+		
+		ranarr = new Array();
+		str = "";
+		
+		for(i = 0; i < 5; i++){
+			ranarr[i] = parseInt(Math.random() * 100);
+		}
+		document.getElementsByTagName("div")[0].innerHTML += ranarr + "<br>";
+		
+	
+		/* for(i = 0; i < ranarr.length; i++){
+			str += ranarr[i] + " ";
+		}
+		str += "<br>";
+	
+		
+		document.getElementsByTagName("div")[0].innerHTML += str; */
+	}
+
+</script>
+</head>
+<body>
+
+<pre>
+확인 버튼 클릭하면 randproc()함수 호출
+
+함수 내에서 랜덤수를 5개를 발생하여 div에 출력
+</pre>
+	<input type = "button" value = "확인" onclick = "randproc()">
+	<br>
+	<br>
+	<div>
+		
+	</div>
+
+</body>
+</html>
