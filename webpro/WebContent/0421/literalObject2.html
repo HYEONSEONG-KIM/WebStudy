@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+	div{
+		width: 300px;
+		height: 500px;
+		border : 1px solid blue;
+	}
+</style>
+<script type="text/javascript">
+
+	Circle = {
+			pi : 3.14,
+			radius : 1,
+			
+			getArea : function(){
+				return (Math.pow(this.radius,2)* this.pi);
+			},
+			getCir : function(){
+				return (this.radius * 2 * this.pi);
+				
+			}
+	}
+	
+	function proc(){
+		
+		Circle.radius = prompt("반지름 입력");
+		result = `넓이 : ${Circle.getArea().toFixed(2)}<br> 둘레 : ${Circle.getCir().toFixed(2)}`;
+		
+		document.getElementById("d1").innerHTML = result;
+		
+	}
+	
+	
+
+</script>
+
+<body>
+<pre>
+Circle객체생성 - 리터럴에 의한 객체
+속성 : 반지름
+메서드 
+- 면적구하기(반지름 *반지름*3.14)
+- 둘레구하기(2 * 반지름 * 3.14)
+div에 출력 
+</pre>
+
+<br><br>
+
+<input type = "button" value = "확인" onclick = "proc()">
+<div id = "d1"></div>
+</body>
+</html>

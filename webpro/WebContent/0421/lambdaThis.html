@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<style>
+	div{
+		border : 1px dotted green;
+		height: 100px;
+		width : 50%;
+		padding : 10px;
+		font-size: 1.5em;
+	}
+</style>
+<script type="text/javascript">
+	
+	window.onload = function(){
+	
+		// div 요소를 검색
+		var dd = document.getElementsByTagName("div");
+		dd[0].innerHTML = "<h1>Hello</h1>";
+		
+		for(i = 0; i < dd.length; i++){
+			dd[i].addEventListener('click', test)
+		}
+		}
+	
+	function test(){
+		//alert("test");
+		//this는 클릭 이벤트를 발생시킨 객체
+		
+		r = parseInt(Math.random() * 256);
+		g = parseInt(Math.random() * 256);
+		b = parseInt(Math.random() * 256);
+		
+		console.log(r,g,b)
+		
+		this.style.background = `rgb(${r},${g},${b})`;
+	} 
+	
+/* 	 test = function(){
+		//alert("test");
+		this.style.background = "green";
+	}  */
+	
+	/* test = () => {
+		//alert("test");
+		//this는 람다함수 자체
+		this.style.background = "pink";
+	}  */
+</script>
+</head>
+<body>
+<pre>
+window.onload = function(){ 
+	
+	body의 요소들이 document객체로 생성되어 window브라우저로 실행되었을때
+}
+
+스크립트에서 이벤트 등록
+dd.addEventListener('이벤트명', 함수명)
+dd.addEventListener('click', test)
+
+함수 선언 방법
+function 함수명(){}
+함수명 = function(){}
+함수명 = () => {}
+</pre>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

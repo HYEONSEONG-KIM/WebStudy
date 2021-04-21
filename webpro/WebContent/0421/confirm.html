@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<script type="text/javascript">
+	function proc1(){
+		
+		str = "";
+		
+		while(true){
+			//단 입력
+			dan = parseInt(prompt("구구단을 입력하세요"));	
+			
+			if(dan > 9){
+				alert("1~9단만 출력 가능합니다")
+				continue;
+			}
+			
+			str += `----------${dan}단----------<br>`;
+			for(i = 1; i <= 9; i++){
+				str += `${dan} x ${i} = ${dan*i} <br>`;
+			}
+			
+			flag = window.confirm("계속 하시겠습니까??");
+			//계속 진행 여부
+			if(!flag){
+				break;
+			}
+		}
+		
+		document.getElementsByTagName("div")[0].innerHTML = str;
+	}
+</script>
+<style>
+	div[id=result1]{
+		border : 1px solid blue;
+		margin : 10px;
+		padding : 10px;
+		font-size: 1.5em;
+		background: skyblue;
+		width : 250px;
+		height: auto;
+	}
+	
+</style>
+</head>
+<body>
+<pre>
+단을 입력-prompt
+구구단 출력
+추후 진행 여부 묻기-> confirm
+</pre>
+	<input type ="button" onclick = "proc1()" value = "확인">
+	<br><br>
+	<div id = "result1"></div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var rect = {
+			row : 10,
+			col : 12,
+			
+			getArea : function(){
+				area = this.row * this.col;
+				return area;
+			},
+			
+			gerCircum : function(){
+				cir = (this.row + this.col) * 2;
+				return cir;
+			}
+	}
+	
+	a = rect.getArea();
+	
+	str = `가로 : ${rect.row}, 세로 : ${rect.col}, 면적 : ${a}, 둘레 : ${rect.gerCircum()}`;
+	window.onload = function(){
+	document.getElementById("d1").innerHTML = str;
+	}
+	
+	var change = () => {
+		 inputrow = parseInt(prompt("가로입력"));
+		 inputcol = parseInt(prompt("세로입력"));
+		 
+		 rect.row = inputrow;
+		 rect.col = inputcol;
+		 
+		 inputArea = rect.getArea();
+		 inputCir = rect.gerCircum();
+		 
+		 result = `입력한 가로 : ${inputrow} <br> 입력한 세로 : ${inputcol}<br>`;
+		 result += `면적 : ${inputArea} <br> 둘레 : ${inputCir}`;
+		 
+		 document.getElementById("d2").innerHTML = result;
+		 
+		
+	}
+</script>
+
+</head>
+<body>
+<pre>
+rect클래스 생성
+속성 : 가로, 세로
+메서드 : getArea() getCircum()
+</pre>
+	<div id = "d1"></div>
+	
+	<br>
+<pre>
+확인버튼 클릭하면 change()함수 호출
+함수내에서 가로 값 세로 값 입력하여 계산
+</pre>
+	<input type = "button" value = "확인" onclick = "change()">
+	<div id = "d2"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

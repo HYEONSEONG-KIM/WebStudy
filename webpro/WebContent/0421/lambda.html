@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* function proc1(){
+		document.getElementById("div")[0].innerHTML = "<h1>Hello</h1>"
+		
+	}
+	var proc1 = function(){
+		document.getElementById("div")[0].innerHTML = "<h1>Hello</h1>"
+		
+	} */
+	
+	var proc1 = () => {		
+		document.getElementsByTagName("div")[0].innerHTML = "<h1>Hello</h1>";
+		
+	} 
+
+</script>
+</head>
+<body>
+<pre>
+람다 함수 -> 화살표를 이용한 함수
+var 함수명 = (매개변수) => {실행내용}
+매개변수가 하나만 있으면 괄호 생략 가능
+매개변수가 없거나 여러개 있으면 괄호 필수
+
+var fa = () => { alert("hello") }
+var proc1 = () => { }  
+
+람다함수 내에서 this는 람다함수 자신
+
+</pre>
+	<input type = "button" value = "확인" onclick = "proc1()">
+	<div></div>
+</body>
+</html>
