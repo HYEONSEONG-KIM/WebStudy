@@ -28,8 +28,19 @@
 	
 	function proc(){
 		
-		Circle.radius = prompt("반지름 입력");
-		result = `넓이 : ${Circle.getArea().toFixed(2)}<br> 둘레 : ${Circle.getCir().toFixed(2)}`;
+		result = "";
+		while(true){
+			
+			Circle.radius = prompt("반지름 입력");
+			
+			result += `넓이 : ${Circle.getArea().toFixed(2)}<br> 둘레 : ${Circle.getCir().toFixed(2)} <br><br>`;
+			
+			flag = window.confirm("계속하시겠습니까??");
+			
+			if(!flag) {
+				break;
+			}
+		}
 		
 		document.getElementById("d1").innerHTML = result;
 		

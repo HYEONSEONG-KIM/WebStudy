@@ -2,3 +2,11 @@ pre{
 	background : lightblue;
 	font-size : 2.0em;
 }
+
+div{
+	border : 1px solid blue;
+	width : 500px;
+	height: auto;
+	margin : 20px;
+	padding : 20px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<style>
+	
+</style>
+<script type="text/javascript">
+	arr = ["홍길동", "개나리", "진달래", "이쁜이", "홍길동", "무궁화", "홍길동", "김은대"];
+	
+	
+	function proc1(){
+		
+		str = prompt("찾고자 하는 단어를 입력하세요")
+		
+		idx = arr.indexOf(str);
+		
+		result = "indexOf실행 <br>";
+		result += "찾는 이름 : " + str + "<br>";
+		result += "위치 : " + idx + "번째 인덱스";
+		
+		document.getElementById("result1").innerHTML = result;
+	}
+		
+	proc2 = () => {
+		
+		str = prompt("찾고자 하는 단어를 입력하세요");
+		
+		idx = arr.lastIndexOf(str);
+		
+		result = "lastIndexOf실행<br>"
+		result += "찾는 이름 : " + str + "<br>";
+		result += "위치 : " + idx + "번째 인덱스";
+		
+		document.getElementById("result2").innerHTML = result;
+	}
+	
+	proc3 = () =>{
+		
+		str = "홍길동";
+		str_idx = "";
+		result = "indexOf실행 <br>이름이 여러개인 경우 모두 찾기<br>";
+		idx = 0;
+
+		while(true){
+			
+			idx = arr.indexOf(str,idx);
+
+			if(idx == -1){
+				break;
+			}
+			str_idx += `${idx} `;
+			console.log(idx);
+			idx++;
+			
+		}
+			console.log(str);
+			
+			result += "찾는 이름 : " + str + "<br>";
+			result += str_idx + "번째<br>"
+		
+		document.getElementById("result3").innerHTML = result;
+	}
+	
+	proc4 = () => {
+		
+		//이름을 입력
+		name = prompt("이름을 입력하세요");
+		
+		idx = arr.indexOf(name);
+		
+		str = "";
+		
+		if(idx == -1){
+			str += "찾는이름 없음"	
+		}else{
+			
+			str += name + "님은 " + idx + "번째에 있습니다<br>"
+			str += "<a href ='detail.jsp?name=" + name + "'>상세보기</a>";
+			//str += `<a href ="detail.jsp?name=${name}">상세보기</a>`;
+		}
+		
+		document.getElementById("result4").innerHTML = str;
+	}
+
+</script>
+</head>
+<body>
+<pre>
+indexOf(item, index) : item의 위치를 리턴, index -> 찾는 시작위치
+lastIndexOf(item, index) : 
+</pre>
+
+	<input type = "button" value = "indexOf" onclick = "proc1()">
+	<input type = "button" value = "lastIndexOf" onclick = "proc2()">
+	<input type = "button" value = "indexOf" onclick = "proc3()">
+	<input type = "button" value = "indexOf" onclick = "proc4()">
+	<div id = "result1"></div>
+	<div id = "result2"></div>
+	<div id = "result3"></div>
+	<div id = "result4"></div>
+	
+</body>
+</html>
