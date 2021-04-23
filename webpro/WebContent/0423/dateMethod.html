@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<script type="text/javascript">
+		today = new Date();
+		function proc1(){
+			
+			//오늘 날짜
+			
+		
+			res = "오늘날짜 : " + today.toLocaleDateString() + "<br>";
+			//요일 구하기
+			day = today.getDay();
+			
+			//alert(day);
+			switch(day){
+				case 0 : 
+					res += "일요일"
+					break;
+				case 1 :
+					res += "월요일"
+					break;
+				case 2 :
+					res += "화요일"
+					break;
+				case 3 :
+					res += "수요일"
+					break;
+				case 4 :
+					res += "목요일"
+					break;
+				case 5 :
+					res += "금요일"
+					break;
+				case 6 :
+					res += "토요일"
+					break;
+			
+			}
+			document.getElementById("result1").innerHTML = res;
+		}
+		
+		function proc2(){
+			
+			days = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+			
+			day2 = today.getDay();
+			
+			res = "오늘날짜 : " + today.toLocaleDateString() + "<br>" + days[day2];
+			document.getElementById("result2").innerHTML = res;
+			
+			
+		}
+	
+</script>
+
+</head>
+<body>
+<pre>
+getDay() : 요일 구하기 0 ~ 6
+getTime() : 경과시간 구하기
+</pre>
+
+	<input type = "button" value = "요일구하기" onclick = "proc1()">
+	<div id = "result1"></div>
+
+<pre>
+배열을 이용한 요일 구하기
+</pre>
+
+	<input type = "button" value = "배열 요일" onclick = "proc2()">
+	<div id = "result2"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
