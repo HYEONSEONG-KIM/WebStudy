@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<style>
+	input[type = date]{
+		width: 300px;
+		height: 30px;
+		font-size: 20px;
+	}
+</style>
+<script type="text/javascript">
+	
+	today = new Date();
+	
+	proc1 = () => {
+		// 태어난 날로 부터 현재까지 경과한 날수, 연도, 연수
+		bir = new Date("1993.08.16");
+
+		// 경과시간 구하기 - getTime() 
+		btoday = today.getTime();
+		bday = bir.getTime();
+	
+		
+		
+		time = btoday - bday;
+		
+		
+		
+		sec = time/1000;
+		min = sec/60;
+		hour = min/60;
+		day = hour/24;
+		year = day/365;
+		
+		res = `태어난 년도 : ${bir.toLocaleDateString()} <br>`;
+		res += `오늘날짜 : ${today.toLocaleDateString()} <br>`;
+		res += `${sec}초 경과 <br>`;
+		res += `${min}분 경과 <br>`;
+		res += `${hour}시간 경과 <br>`;
+		res += `${day}일 경과 <br>`;
+		res += `${year}년 경과 <br>`;
+		
+		document.getElementById("result1").innerHTML = res;
+	}
+	
+	proc2 = () =>{
+		
+		christmas = new Date("2021.12.25");
+		
+		nowtime = today.getTime();
+		christime = christmas.getTime();
+		
+		result = christime - nowtime;
+		
+		day = result/1000/60/60/24;
+		
+		res = `크리스마스 까지 ${day}일 남았습니다`;
+		
+		document.getElementById("result2").innerHTML = res;
+		
+	}
+	function proc3(){
+		
+		pday = document.getElementById("pday").value;
+		
+		selday = new Date(pday);
+		
+		tpday = selday.getTime();
+		nowtime = today.getTime();
+		
+		result = nowtime - tpday;
+		
+		day = result/1000/60/60/24;
+		
+		res = `${day.toFixed(0)}일 경과했습니다 <br>`;
+		
+		if(day > 7){
+			res += `교환 및 환불이 불가능합니다`;
+		}else if(day > 0 && day <= 7){
+			res += `교환 및 환불이 가능합니다`;
+		}else{
+			res = `입력하신 날짜가 올바르지 않습니다`;
+		}
+		
+		document.getElementById("result3").innerHTML = res;
+		
+		
+	}
+
+</script>
+</head>
+<body>
+<pre>
+getTime() : 경과시간 구하기
+=> 반환값 : millisec
+</pre>
+	<input type = "button" value = "확인" onclick = "proc1()">
+	<div id = "result1"></div>
+	
+<pre>
+크리스마스까지 남은날 수
+</pre>
+
+	<input type = "button" value = "확인" onclick = "proc2()">
+	<div id = "result2"></div>
+	
+<pre>
+날짜선택
+선택한 날로부터 현재까지 지난 일수 구하기
+</pre>
+
+	<input type = "date" id = "pday">
+	<input type = "button" value = "확인" onclick = "proc3()">
+	<div id = "result3"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

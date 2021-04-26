@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<script type="text/javascript">
+	
+	str = "우리나라 좋은나라 대한민국 만세~~ 독도는 우리땅 ~~";
+	
+	proc1 = () =>{
+		
+		a= str.charAt(3);
+		b = str.charCodeAt(3);
+		
+		res = `str.charAt(3) : ${a} <br>`;
+		res += `str.charCodeAt(3) : ${b} <br>`;
+		
+		document.getElementById("result1").innerHTML = res;
+	}
+	
+	function proc2(){
+		
+		a = str.indexOf("나라");
+		b = str.lastIndexOf("독도");
+		
+		res = `str.indexOf("나라") : ${a} <br>`;
+		res += `str.lastindexOf("독도") : ${b} <br>`;
+		
+		document.getElementById("result2").innerHTML = res;
+		
+	}
+	
+	proc3 = () =>{
+		
+		inputStr = document.getElementById("txt").value;
+		
+		res = `공백제거 전 : ${inputStr.length} <br>`;
+		
+		after = inputStr.trim();
+		res += `공백제거 후 : ${after.length} <br>`;
+		
+		if(after.length < 1){
+			alert("데이터를 입력하세요")
+			return;
+		}
+		
+		document.getElementById("result3").innerHTML = res;
+	}
+	
+	proc4 = function(){
+		a = str.indexOf("독");
+		b = a + "독도는 우리땅".length;
+		sub = str.substring(a,b);
+		sli = str.slice(a,b);
+		subs = str.substr(a,b);
+		
+		console.log(a);
+		console.log(b);
+		
+		res = `str.substring(a,b) : ${sub} <br>`;
+		res += `str.slice(a,b) : ${sli} <br>`;
+		res +=  `str.substr(a,b) : ${subs} <br>`;
+		
+		document.getElementById("result4").innerHTML = res;
+	}
+	function proc5(){
+		
+		arr = str.split(" ");
+		
+		document.getElementById("result5").innerHTML = arr;
+		
+		
+	}
+	
+	function proc6(){
+		
+		textArea = document.getElementById("txta").value;
+		result = textArea.replace(/\r/g, "").replace(/\n/g,"<br>");
+		
+		document.getElementById("result6").innerHTML = result;
+	}
+	
+	function proc7(){
+		
+		divStr = document.getElementById("result7").innerHTML;
+		
+		res = divStr.replaceAll("<br>","\r\n");
+		
+		document.getElementById("txta2").innerHTML = res;
+		
+	}
+
+</script>
+
+</head>
+
+<body>
+<pre>
+charAt(index) : index번째에 있는 문자를 리턴
+charCodeAt(index) : index번째에 있는 유니코드를 리턴
+A -> 65, a -> 97, 0 -> 48
+</pre>
+
+	<input type = "button" value = "확인" onclick = "proc1()">
+	<div id = "result1"></div>
+
+<pre>
+indexOf(value, index) : value값의 위치를 리턴, index는 검색 시작위치
+lastIndexOf(value, index)
+</pre>
+
+	<input type = "button" value = "확인" onclick = "proc2()">
+	<div id = "result2"></div>
+
+<pre>
+trim() : 앞뒤의 공백을 제거
+text입력 후 script로 보내기
+</pre>
+	<input type = "text" id ="txt">
+	<input type = "button" value = "확인" onclick = "proc3()">
+	<div id = "result3"></div>
+
+<pre>
+start ~ end 사이의 문자열 잘라내기, end는 포함되지 않음
+substring(start, end)
+slice(start, end)
+substr(start, length)
+</pre>
+	<input type = "button" value = "확인" onclick = "proc4()">
+	<div id = "result4"></div>
+	
+<pre>
+split('구분자', '갯수') : 구분자를 기준으로 문자열을 분리하여 배열로 리턴
+</pre>
+
+	<input type = "button" value = "확인" onclick = "proc5()">
+	<div id = "result5"></div>
+	
+<pre>
+replace(old, new) : old문자를 new문자로 바꿈
+textarea에 입력 - value를 이용하여 스크립트로 보내 div에 출력
+</pre>
+	<textarea id= "txta" rows="10" cols="50"></textarea>
+	<input type = "button" value = "확인" onclick = "proc6()">
+	<div id = "result6"></div>
+	
+<pre>
+div에 입력되어 있는 문자 스트립트로 가져가기
+textarea에 출력
+</pre>	
+
+    <textarea id= "txta2" rows="10" cols="50"></textarea>
+	<input type = "button" value = "확인" onclick = "proc7()">
+	<div id = "result7">동해물과 백두산이<br>마르고 닳도록<br>하느님이 보우하사<br>우리나라 만세<br>무궁화 삼천리<br>화려강산<br>대한사람 대한으로<br>길이 보전하세<br>
+	</div>
+
+</body> 
+</html>
+
+
+
+
+
+
+
+
+
