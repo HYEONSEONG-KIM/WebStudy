@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<style>
+	form{
+		border : 2px solid blue;
+		margin : 20px auto;
+		padding : 20px;
+		width : 40%;
+		height : auto;
+	}
+	
+</style>
+
+<script type="text/javascript">
+	
+	function sub(){
+		
+		name = document.getElementById("name").value;
+		
+		console.log(name);
+		
+		// 입력여부 확인
+		if(name.trim().length < 1){
+			alert("이름을 입력하세요");
+			return;
+		}
+		
+		res = name + "님 환영합니다"
+		
+		// 부모창으로 출력
+		opener.document.getElementById("result1").innerHTML = res;
+	}
+
+</script>
+
+</head>
+<body>
+<pre>
+이름을 입력하고 확인 버튼 클릭하면
+부모창으로 이름이 출력되도록 코딩
+부모창을 나타내는 속성 : opener
+</pre>
+	<form>
+		이름 :&nbsp;&nbsp;<input type = "text" id = "name" required="required"><br><br>
+		<input type = "button" value = "확인" onclick = "sub()">
+	</form>
+</body>
+</html>

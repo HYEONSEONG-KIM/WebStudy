@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<style>
+	
+	a{
+		font-size: 2.0em;
+		text-decoration: none;
+	}
+	a:VISITED {
+		text-decoration: none;
+	}
+	a:ACTIVE {
+		text-decoration: none;
+	}
+}
+
+</style>
+<script type="text/javascript">
+	
+	function proc1(){
+		
+		res = "host : " + location.host + "<br>";
+		res += "hostname : " + location.hostname + "<br>";
+		res += "port : " + location.port + "<br>";
+		res += "href : " + location.href + "<br>";
+		res += "pathname : " + location.pathname + "<br>";
+		res += "protocol : " + location.protocol + "<br>";
+		
+		document.getElementById("result1").innerHTML = res;
+	}
+	
+	function proc2(){
+		
+		location.href = "test.jsp?name=korea";
+		
+	}
+	function goReplace(url){
+		
+		location.replace(url + "?name=공지");
+		
+	}
+	
+	function goReload(){
+		
+		// 문자열을 배열로 저장, 랜덤을 이용해서 하나의 문자를 선택
+		
+		str = ["Hello", "HTML", "JavaScript", "jQuery", "CSS", "Java", "Oracle"];
+		idx = parseInt(Math.random() * str.length);
+		
+		// 출력
+		res = `<h1>${str[idx]}</h1>`;
+		
+		r = parseInt(Math.random() * 256);
+		g = parseInt(Math.random() * 256);
+		b = parseInt(Math.random() * 256);
+		
+		col = `rgb(${r}, ${g}, ${b})`;
+		
+		document.getElementById("result2").innerHTML = res;
+		document.getElementById("result2").style.color = col;
+		
+		setTimeout(function(){
+			location.reload();
+		},3000);
+	}
+
+</script>
+</head>
+<body>
+<pre>
+location : url에 대한 정보를 갖는 객체
+</pre>
+	<input type = "button" value = "확인" onclick = "proc1()">
+	<div id = "result1"></div>
+	<br><br>
+	<h3>페이지 이동 location.href=""</h3>
+	<input type = "button" value = "확인" onclick = "proc2()">
+	<br><br>
+<pre>
+a태그에서 href 속성에 이동할 페이지를 설정
+a태그에  함수설정 가능 => javascript:함수명
+
+</pre>
+	<a href = "javascript:proc2()">test.jsp</a>
+	<br><br>
+<pre>
+현재 문서를 새로운 문서로 대체
+다시 현재 문서로 돌아갈 수 없음
+</pre>	
+	
+	<a href = 'javascript:goReplace("test.jsp")'>공지사항</a>
+	<br><br>
+	
+<pre>
+현재문서를 다시 리로드
+문자열을 출력하고 3초가 지나면 현재문서로 다시 돌아오게함
+</pre>
+	<input type = "button" value = "확인" onclick =  "goReload()">
+	<div id = "result2"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

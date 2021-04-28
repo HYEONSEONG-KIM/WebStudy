@@ -52,6 +52,30 @@
 		
 		document.getElementById("result").innerHTML =result;
 	}
+	function lotto(){
+		
+		lottoarr = new Array();
+		while(true){
+			flag = false;
+			lottoRan = parseInt(Math.random() * 45 + 1);
+			
+			for(i = 0; i < lottoarr.length; i++){
+				if(lottoarr[i] == lottoRan){
+					flag = true;
+				}
+			}
+			
+			if(!flag){
+				lottoarr.push(lottoRan);
+			}
+			if(lottoarr.length == 6){
+				break;
+			}
+		}
+		
+		document.getElementById("result2").innerHTML += lottoarr + "<br>";
+		
+	}
 
 </script>
 </head>
@@ -75,6 +99,12 @@
 	<input type = "button" value = "입력" onclick = "rps()">
 	<div id = "result"></div>
 	
+<pre>
+로또 번호를 생성하는 프로그램을 작성하시오.(1번 ~ 45번 중 6개의 번호를 추첨)
+</pre>
+<h1>Lotto</h1>
+	<input type = "button" value = "입력" onclick = "lotto()">
+	<div id = "result2"></div>
 </body>
 </html>
 

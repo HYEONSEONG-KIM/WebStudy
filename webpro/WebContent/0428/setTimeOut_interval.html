@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">]
+<style>
+	div{
+		border : 1px solid red;
+		height: 300px;
+	}
+
+</style>
+<script type="text/javascript">
+	
+	proc1 = () => {
+			
+		setTimeout(function(){
+			
+			r1 = document.getElementById("result1");
+			
+			r1.style.background = 'yellow';
+		}, 1000);
+	}
+	
+	proc2 = (but) => {
+		
+		okbut = but;
+		
+		r2 =  document.getElementById("result2");
+		
+		a = setInterval(function(){
+		
+		r = parseInt(Math.random() * 256);
+		g = parseInt(Math.random() * 256);
+		b = parseInt(Math.random() * 256);
+		
+		r2.style.background = `rgb(${r}, ${g}, ${b})`;
+		
+		console.log(a)
+		}, 500)
+		
+		but.setAttribute("disabled",true);
+		//but.style.display = "none";
+		//document.getElementById("button").setAttribute("disabled","disabled");
+		// document.getElementById("button").style.display = "none";
+	}
+	
+
+	
+	
+	function proc3(){
+		clearInterval(a);
+		//okbut.style.display = "inline";
+		okbut.removeAttribute("disabled");
+	}
+</script>
+</head>
+<body>
+	<input type = "button" value = "확인" onclick = "proc1()">
+	<div id = "result1">
+		setTime(fn, sec) : sec에 지정된 시간이 경과하면 배경이 바뀜
+	</div> <br>
+<pre>
+확인버튼을 여러번 연속으로 클릭하면 종료가 수행되지 않음
+확인버튼을 여러번 클릭하지 못하도록 설정
+확인버튼을 안보이게 하거나 클릭하지 못하도록 설정 - display : none;
+클릭하지 못하도록 - disabled = "disabled"(속성 : attribute)
+</pre>
+	<input type = "button" id = "button" value = "확인" onclick = "proc2(this)">
+	<input type = "button" value = "종료" onclick = "proc3()">
+	<div id = "result2">
+		setInterval(fn, sec) : sec에 지정된 시간이 경과할 때마다 배경색을 바꿈<br>
+		random()메서드 사용
+	</div>
+</body>
+</html>

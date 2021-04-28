@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<script type="text/javascript">
+
+	function proc1(){
+		
+		list = document.getElementsByTagName("ul");
+		list = document.querySelector("ul");
+		
+		litag = list.getElementsByTagName("li");
+		
+		res = "";
+		for(i = 0; i < litag.length; i++){
+			res += litag[i].firstChild.data + "<br>";
+		}
+		
+		document.getElementById("result1").innerHTML = res;
+	}
+	
+	function proc2(){
+		
+		list2 = document.getElementsByTagName("ul")[1];
+		
+		litag2 = list2.getElementsByTagName("li");
+		
+	}
+
+</script>
+</head>
+<body>
+<pre>
+li의 요소에서 자식요소의 값을 가져옴
+</pre>
+	<ul>
+		<li>List item1</li>
+		<li>List item2</li>
+		<li>List item3</li>
+		<li>List item4</li>
+		<li>List item5</li>
+	</ul>
+	<input type= "button" value = "확인" onclick = "proc1()">
+	<div id = "result1"></div>
+	<br><br>
+<pre>
+li의 값에 해당하는 이미지를 출력
+</pre>
+	<ul>
+		<li>가구1.jpg</li>
+		<li>국화.jpg</li>
+		<li>뱅쇼.jpg</li>
+		<li>아메리카노.jpg</li>
+		<li>펭귄.jpg</li>
+	</ul>
+	<input type= "button" value = "확인" onclick = "proc2()">
+	<div id = "result2"></div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
