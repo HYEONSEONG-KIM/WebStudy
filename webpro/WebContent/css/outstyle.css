@@ -10,9 +10,9 @@ div{
 	margin : 20px;
 	padding : 20px;
 }
-input[type=button]{
+input[type=button] ,button, button[type=button]{
 	
-	width : 60px;
+	width : auto;
 	height: 30px;
 	padding : 5px 10px;
 	background: #fcfcfc;

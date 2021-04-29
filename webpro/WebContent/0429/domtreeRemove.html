@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel = "stylesheet" href = "../css/outstyle.css">
+<script type="text/javascript">
+	
+	function removeNode(){
+		
+		parent = document.getElementById("target");
+		child = document.getElementById("p1");
+		console.log(child);
+		parent.removeChild(child);
+	}
+	
+	function proc1(){
+		
+		// 문자열 배열 생성
+		str = ["베토벤", "차이코프스키", "라흐마니노프", "말러", "비발디", "스트라빈스키"];
+		
+		// 랜덤 발생
+		ran = parseInt(Math.random() * str.length);
+		
+		// 문자열 선택
+		str[ran];
+		
+		// 문자열로 텍스트 노드 생성
+		text = document.createTextNode(str[ran]);
+		// p태그 생성
+		pc = document.createElement("p");
+		
+		pc.appendChild(text);
+		
+	
+		
+		document.getElementById("result1").appendChild(pc);
+	
+	}
+	function proc2(){
+		
+		par = document.getElementById("result1");
+		child = par.lastChild;
+		
+		if(child != null){
+			par.removeChild(child);
+		}else{
+			alert("삭제할 요소가 없습니다")
+		}
+	}
+	
+	function proc3(){
+		
+		str = ["베토벤", "차이코프스키", "라흐마니노프", "말러", "비발디", "스트라빈스키"];
+		
+		// 랜덤 발생
+		ran = parseInt(Math.random() * str.length);
+		
+		// 문자열 선택
+		str[ran];
+		
+		// 문자열로 텍스트 노드 생성
+		text = document.createTextNode(str[ran]);
+		bntText = document.createTextNode("삭제");
+		// p태그 생성
+		pc = document.createElement("p");
+		
+		bnt = document.createElement("button")
+		bnt.appendChild(bntText);
+		
+		//bnt.setAttribute("onclick", "deleteEl(this)");
+		
+		pc.setAttribute("onclick", "deleteEl(this)")
+		
+		/* 
+		bnt.onclick = function(){
+			pp = this.parentNode;
+			pp.remove();
+		}  */
+		
+		
+		pc.appendChild(text);
+		pc.appendChild(bnt);
+		
+		
+		document.getElementById("result2").appendChild(pc);
+		
+	}
+	
+	function deleteEl(bnt){
+		
+		bnt.remove();
+	/* 	console.log(bnt);
+		bnt.parentNode.remove(); */
+		
+		
+	}
+
+</script>
+</head>
+<body>
+<pre>
+요소 삭제 - removeChild()
+
+parent.removeChild(child)
+</pre>
+	<div id="target">
+        <p id="p1">첫번째 단락</p>
+        <p id="p2">두번째 단락</p>
+    </div>
+    <button onclick="removeNode()">누르세요!</button>
+    
+    
+ <pre>
+ 문자배열 생성
+ 문자열 선택 - TextNode생성
+ p태그 생성
+ p태그에 TextNode 추가
+ p태그 result1에 추가
+ </pre>
+ 	<button type = "button" onclick = "proc1()">추가</button>
+ 	<button type = "button" onclick = "proc2()">삭제</button>
+ 	
+ 	<div id = "result1"></div>
+ 
+<pre>
+추가 버튼 클릭시 p태그 생성동시에 button(삭제)요소 만들기
+</pre>
+ 	<button type = "button" onclick = "proc3()">추가삭제</button>
+ 	<div id = "result2"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

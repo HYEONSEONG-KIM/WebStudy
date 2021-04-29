@@ -27,6 +27,15 @@
 		
 		litag2 = list2.getElementsByTagName("li");
 		
+		img = document.createElement('img');
+		
+		res = "";
+		for(i = 0; i < litag2.length; i++){
+			res += litag2[i].firstChild.data + "<br>";
+		}
+		
+		document.getElementById("result2").innerHTML = res;
+		
 	}
 
 </script>
