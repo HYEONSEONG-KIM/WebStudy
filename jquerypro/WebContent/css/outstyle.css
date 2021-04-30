@@ -1,0 +1,40 @@
+pre{
+	background : lightblue;
+	font-size : 2.0em;
+}
+
+div{
+	border : 1px solid blue;
+	width : 500px;
+	height: auto;
+	margin : 20px;
+	padding : 20px;
+}
+input[type=button] ,button, button[type=button]{
+	
+	width : auto;
+	height: 30px;
+	padding : 5px 10px;
+	background: #fcfcfc;
+	border-radius : 10px;
+	
+}
+
+.box{
+	background-image: linear-gradient(lightblue, white);
+	border : 1px solid blue;
+	height : auto;
+	margin : 20px;
+	padding : 20px;
+	
+}
+
+.box div{
+	
+	border : 1px dotted orange;
+	height: auto;
+	width : 300px;	
+	margin : 20px;
+	padding : 20px;
+	
+}
