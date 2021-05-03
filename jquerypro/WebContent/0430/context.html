@@ -17,7 +17,8 @@
 	$(function(){
 		//document.getElementsByTagName('p')
 		$('p').css('background', 'pink');	
-		$('p',document.forms[2]).css('background', 'red');	
+		$('p',document.forms[2]).css('background', 'red');
+		
 		
 		
 		$('form').on('click',function(){
@@ -27,7 +28,13 @@
 			b = parseInt(Math.random() * 256);
 			col = `rgb(${r},${g},${b})`;
 			
-			$('p', this).css('background', col);
+			a = $('p',this).length;
+			
+			ran = parseInt(Math.random() *a);
+			
+			console.log(ran);
+			
+			$('p', this).eq(ran).css('background', col);
 		
 			
 		});
@@ -38,6 +45,7 @@
 </head>
 <body>
 <pre>
+eq : 요소 접근
 $('선택자',context)
 context : 선택자를 검색할 범위를 설정
 context 생략시 문서 전체에서 선택자를 검색
