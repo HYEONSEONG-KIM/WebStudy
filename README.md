@@ -2,7 +2,7 @@
 
 
 ## jQuery
-- [Summary](https://hyeonseong-kim.github.io/WebStudy/)
+- [Summary](https://hyeonseong-kim.github.io/WebStudy/jquerypro/)
 
 ## HTML
 - [HTML 이란?](https://github.com/HYEONSEONG-KIM/WebStudy/blob/main/HTML/HTML%EC%9D%B4%EB%9E%80.md)
